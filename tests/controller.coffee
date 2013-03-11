@@ -1,4 +1,4 @@
-controller = require '../lib/express-controller'
+controller = require '../lib/xcontroller'
 
 module.exports = 
 
