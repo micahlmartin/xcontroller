@@ -1,6 +1,6 @@
 {
 	"name": "xcontroller",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "Micah Martin <micahlmartin@gmail.com>",
 	"description": "Lightweight controller framework for express",
 	"contributors": [
@@ -9,6 +9,10 @@
 			"email": "micahlmartin@gmail.com"
 		}
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/micahlmartin/xcontroller"
+	},
 	"main": "./lib/xcontroller",
 	"keywords": [
 		"express",
