@@ -1,4 +1,4 @@
-node-controller
+express-controller
 ===============
 
-Controller framework for NodeJS
+NodeJS controller framework for express
