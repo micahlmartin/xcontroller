@@ -50,7 +50,7 @@ module.exports = {
 };
 ```
 
-If you're not using express you can manully register the callbacks
+If you're not using express or you want to manually register the callbacks
 
 ```javascript  
 var controllers = require('express-controller');
