@@ -11,6 +11,22 @@ module.exports =
 			test.equal 1, routes.length
 			test.done()
 
+	WhenExpressAndCallbackAreNotDefined_ThenError: (test) ->
+
+		test.expect 3
+
+		try
+			controller "./tests/controllers/okController"
+		catch e
+			test.ok e
+
+		controller "./tests/controllers/okController", (err, routes) -> 
+
+			test.ok not err?
+			test.equal 1, routes.length
+			test.done()
+
+
 	WhenControllerDirectoryIsNotSpecified_ThenError: (test) ->
 
 		test.expect 1

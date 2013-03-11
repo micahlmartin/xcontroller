@@ -2,10 +2,15 @@ fs 		= require 'fs'
 path 	= require 'path'
 
 module.exports = (opts, done) ->
+
 	if typeof opts is "string"
 		opts = dir: opts
 
 	opts = opts || {}
+
+	if not opts.express? and typeof done isnt 'function'
+		throw new Error "You must either pass in a callback or specify opts.express"
+		
 	opts.dir = opts.dir || null
 	done = done || () ->
 
