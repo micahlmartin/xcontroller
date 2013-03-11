@@ -76,8 +76,6 @@ module.exports = (opts, done) ->
 							done new Error("Base route or action route must be specified. Action name: #{obj}"), null
 							return 
 
-						log "Registering route: #{route}"
-
 						handler = action.handler
 						middleware = action.middleware || []
 
@@ -89,6 +87,7 @@ module.exports = (opts, done) ->
 							middleware: middleware
 
 						if opts.express?
+							log "Registering route with express: #{route}"
 							opts.express[method](route, middleware, handler)
 
 				else
