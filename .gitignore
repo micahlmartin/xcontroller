@@ -12,5 +12,5 @@ logs
 results
 
 npm-debug.log
-node-modules
+node_modules
 .DS_Store
