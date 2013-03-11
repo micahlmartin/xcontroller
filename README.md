@@ -1,4 +1,4 @@
-# express-controller
+# xcontroller
 
 NodeJS controller framework for express. Makes your controller more easily testable.
 
@@ -51,7 +51,7 @@ module.exports = {
 };
 ```
 
-If you're not using express or you want to manually register the callbacks
+If you want to manually register the callbacks
 
 ```javascript  
 var controllers = require('express-controller');
