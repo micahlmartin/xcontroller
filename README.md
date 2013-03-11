@@ -2,7 +2,7 @@
 
 NodeJS controller framework for express
 
-## usage
+## Usage
 
 ```javascript  
 var app = require('express')()
