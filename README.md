@@ -1,9 +1,10 @@
 # express-controller
 
-NodeJS controller framework for express
+NodeJS controller framework for express. Makes your controller more easily testable.
 
 ## Usage
 
+Configuration:  
 ```javascript  
 var app = require('express')()
 var controllers = require('express-controller');
