@@ -11,11 +11,46 @@ var controllers = require('express-controller');
 controllersPath = path.resolve("./controllers");
 
 controllers({
-  dir: controllersPath,
-  express: app,
-  verbose: true
+  dir: controllersPath, /* the path where the controllers are located */
+  express: app, /* optionally pass in express to automatically register the routes */
+  verbose: true /* writes debug logging to the console */
 });
-```  
+```
+
+Example Controller:  
+```javascript  
+module.exports = {
+  
+  options: {
+    baseRoute: '/myRoute'
+  },
+  
+  /*
+      method: defaults to 'get'
+      route: uses the base route of '/myRoute'
+  */
+  index: {
+    handler: function (req, res) {
+      res.send("Hello World!");
+    }
+  },
+  
+  /*
+      handles a post reqest
+      add some middleware
+      sets a route of '/myroute/:id/edit'
+  */
+  edit: {
+    route: '/:id/edit',
+    method: 'post',
+    middleware: requireLogin /* some middleware */,
+    handler: function (req, res) {
+      res.send "Editing something"
+    }
+  }
+  
+};
+```
 
 If you're not using express you can manully register the callbacks
 
