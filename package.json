@@ -1,0 +1,25 @@
+{
+	"name": "express-controller",
+	"version": "0.0.1",
+	"author": "Micah Martin <micahlmartin@gmail.com>",
+	"description": "Lightweight controller framework for express",
+	"contributors": [
+		{
+			"name": "Micah Martin",
+			"email": "micahlmartin@gmail.com"
+		}
+	],
+	"main": "./lib/express-controller",
+	"keywords": [
+		"express",
+		"mvc",
+		"controller"
+	],
+	"dependencies": {
+		"express": "*"
+	},
+	"devDependencies": {
+		"coffee-script": "*",
+		"nodeunit": "*"
+	}
+}
