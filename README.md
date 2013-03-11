@@ -8,10 +8,8 @@ NodeJS controller framework for express
 var app = require('express')()
 var controllers = require('express-controller');
 
-controllersPath = path.resolve("./controllers");
-
 controllers({
-  dir: controllersPath, /* the path where the controllers are located */
+  dir: './controllersPath', /* the path where the controllers are located */
   express: app, /* optionally pass in express to automatically register the routes */
   verbose: true /* writes debug logging to the console */
 });
@@ -56,8 +54,7 @@ If you're not using express you can manully register the callbacks
 
 ```javascript  
 var controllers = require('express-controller');
-controllersPath = path.resolve("./controllers");
-controllers(controllersPath, function(routes){ 
+controllers("./controllers", function(routes){ 
   /*
     Route:
     
