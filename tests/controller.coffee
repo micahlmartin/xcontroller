@@ -2,6 +2,15 @@ controller = require '../lib/express-controller'
 
 module.exports = 
 
+	WhenOptionsAreNotSpecified_ThenFirstArgIsDirectory: (test) ->
+
+		test.expect 1
+
+		controller "./tests/controllers/okController", (err, routes) ->
+
+			test.equal 1, routes.length
+			test.done()
+
 	WhenControllerDirectoryIsNotSpecified_ThenError: (test) ->
 
 		test.expect 1

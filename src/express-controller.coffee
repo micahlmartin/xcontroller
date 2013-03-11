@@ -2,9 +2,12 @@ fs 		= require 'fs'
 path 	= require 'path'
 
 module.exports = (opts, done) ->
+	if typeof opts is "string"
+		opts = dir: opts
 
 	opts = opts || {}
 	opts.dir = opts.dir || null
+	done = done || () ->
 
 	log = (message) ->
 
