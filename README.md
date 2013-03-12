@@ -1,6 +1,6 @@
 # xcontroller
 
-NodeJS controller framework for express. Makes your controller more easily testable.
+NodeJS controller framework for express. Makes your controller easier to test.
 
 ## Usage
 
