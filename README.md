@@ -7,7 +7,7 @@ NodeJS controller framework for express. Makes your controller more easily testa
 Configuration:  
 ```javascript  
 var app = require('express')()
-var controllers = require('express-controller');
+var controllers = require('xcontroller');
 
 controllers({
   dir: './controllersPath', /* the path where the controllers are located */
@@ -54,7 +54,7 @@ module.exports = {
 If you want to manually register the callbacks
 
 ```javascript  
-var controllers = require('express-controller');
+var controllers = require('xcontroller');
 controllers("./controllers", function(routes){ 
   /*
     Route:
@@ -65,7 +65,8 @@ controllers("./controllers", function(routes){
       method: 'get', 'post', 'put', 'delete'
       handler: function(req, res)
     
-    Manually register with express
+    Manually register with 
+    
     
       app[method](route, middleware, handler)
   */
